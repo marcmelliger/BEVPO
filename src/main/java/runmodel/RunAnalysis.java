@@ -37,8 +37,11 @@ public abstract class RunAnalysis{
 	
 	
 	// General Config
+	
+	
 	public static String basePathQueries 	= "/Users/marc/Documents/ETH/Masterarbeit/Data/Queries/";
 	
+	public static String baseInputPath		= "/Users/marc/Documents/ETH/Masterarbeit/Data/Input/";
 	public static String basePathChargermap	= "/Users/marc/Documents/ETH/Masterarbeit/Data/Input/chargermap/";
 	public static String basePathCar 		= "/Users/marc/Documents/ETH/Masterarbeit/Data/Input/cars/csv/";
 	public static String basePathChargers 	= "/Users/marc/Documents/ETH/Masterarbeit/Data/Input/chargers/csv/";
@@ -149,7 +152,7 @@ public abstract class RunAnalysis{
 		// ----- Api Key -----
 
 		Properties apiKey = new Properties();
-		input = new FileInputStream("config/google_api.properties");
+		input = new FileInputStream(baseInputPath + "google_api.properties");
 		apiKey.load(input);
 		RouteLeg.googleApiKey = apiKey.getProperty("apiKey");
 		
