@@ -122,13 +122,11 @@ and needs to have the following columns (the name of the columns can be adjusted
 |homeParking|Variable used to define if parking spaces are available. <=0 is no parking space, >0 is with parking space|
 
 The following is and example entry:
+
 |householdID|personID|legID|distance|legStartTime|legEndTime|legStartAddress|legEndAddress|legStartAddressAlt|legEndAddressAlt|legStartAddressManual|legEndAddressManual|legPurpose|leisurePurpose|wayPurpose|driverType|carType|carID|homeParking|
-
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-
 |6|	1|	1|	33	|700	|1000	|1800	|1050	|Municp1	|Municp2		||	|8	|1	|8	1|	8|	1|	1|	3|
-||6|	2|	1|	12	|700	|1000	|1800	|1050	|Municp1	|Municp2	||		|8	|1	|8	1|	8|	1|	1|	3|
-||6|	1|	2|	33.1|1400	|1600	|1050	|1800	|Municp2	|Municp1	||		|11	|-99|	8|	2|	8|	1|	1|	3|
+|6|	2|	1|	12	|700	|1000	|1800	|1050	|Municp1	|Municp2	||		|8	|1	|8	1|	8|	1|	1|	3|
+|6|	1|	2|	33.1|1400	|1600	|1050	|1800	|Municp2	|Municp1	||		|11	|-99|	8|	2|	8|	1|	1|	3|
 |6|	2|	2|	12.2|1400	|1600	|1050	|1800	|Municp2	|Municp1		||	|11	|-99|	8|	2|	8|	1|	1|	3|
 |7|	1|	1|	0.5	|500	|510	|1200	|1201	|Municp3	|Municp3		||	|3	|-99|	3|	1|	8|	1|	1|	2|
 |7|	1|	2|	10	|900	|940	|1201	|1000	|Municp4	|Municp5		||	|4	|-99|	4|	1|	8|	1|	1|	2|
