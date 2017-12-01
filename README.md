@@ -86,20 +86,17 @@ countryToplevel = "ch"; // toplevel domain
 ```
 
 
-### Travel surveys.
-TODO: description of travel survey
+### Travel surveys
+The travel survey data file contains all the travel diaries. It is based on single legs to ceratain activities (compare model concept report).
 
-The path to the travel survey csv needs to be set in RunAnalysis[Country].java
+The path to the travel survey data file needs to be set in RunAnalysis[Country].java
 ```
 LEG_DATA_FILENAME = "travel_survey.csv";
 ```
 
-The csv file contains individual legs that have been covered by cars. 
+Each record of the data file is an individual legs that has been covered by one car. The file need to have the following structure (the names of the fields can be adjusted in RunAnalysis[Country].java)
 
-
-and needs to have the following columns (the name of the columns can be adjusted in RunAnalysis[Country].java
-
-|Column|Description|
+|Field|Description|
 |---|---|
 |householdID|An ID that is unique to individual households. Ther can be many legs with different cars with the same householdID|
 |personID|In multi person households, the personID identifies the persons|
@@ -121,7 +118,7 @@ and needs to have the following columns (the name of the columns can be adjusted
 |carID|An ID that is unique to individual cars in a household|
 |homeParking|Variable used to define if parking spaces are available. <=0 is no parking space, >0 is with parking space|
 
-The following is and example entry:
+The following table shows some example entries:
 
 |householdID|personID|legID|distance|legStartTime|legEndTime|legStartAddress|legEndAddress|legStartAddressAlt|legEndAddressAlt|legStartAddressManual|legEndAddressManual|legPurpose|leisurePurpose|wayPurpose|driverType|carType|carID|homeParking|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -135,9 +132,9 @@ The following is and example entry:
 |7|1|4|20	|1010	|1050	|1900	|1201	|Municp6	|Municp4		|||3	|-99|3|		8|	1|	1|	1|
 |7|1|5|10	|1100	|1300	|1201	|1200	|Municp4	|Municp3		|||11	|-99|3|		8|	1|	1|	1|
 |7|2|4|20	|1000	|1300	|8000	|8704	|Zurich		|Herrlibrg		|||3	|-99|3|		8|	1|	2|	1|
-|7|2|5|10	|1300	|1500	|8704	|8000	|Herrliberg |Zurich		   |||11.  |-99|3|		8|	1|	2|	1|
+|7|2|5|10	|1300	|1500	|8704	|8000	|Herrliberg |Zurich		   |||11  |-99|3|		8|	1|	2|	1|
 
-In most cases, you want query your travel survey, to only containt cars. To build the required data file and consider this condition, a SQL statement as the following one is suitable. It is valid for the Swiss national travel survey Mikrozensus Mobilität 2011:
+In most cases, you want query a national travel survey that only contains car legs. To build the required data file and consider this condition, a SQL statement like the following one is suitable. This example queries the Swiss national travel survey Mikrozensus Mobilität 2011 and produced a valid data file.
 
 ```
 SELECT
@@ -164,8 +161,32 @@ ORDER BY householdID,legStartTime,personID,carType ASC
 ```
 
 
+### Charging Station Coordinates
+This Charging Station Coordinates data file contains all charging stations that can be added along the legs. The model uses this data for its Google Maps Routing.
+
+The path to the charging station coordinates data file needs to be set in RunAnalysis[Country].java.
+```
+CHARGING_STATIONS_FILENAME = "CH_stations.csv";
+```
+
+Each record of the data file is an individual charging station at a specific coordinate. The file need to have the following structure (the names of the fields can be adjusted in RunAnalysis[Country].java):
 
 
+|Field|Description|
+|---|---|
+|ID|A unique identifier|
+|Lat|Latitude of the charging station|
+|Lng|Longitued of the charging station|
+|Power|The power of the charging station in kW|
+|Name|The name of the charging station|
+|Type|Either service_station or existing_station|
+|Double|To exlude a dataset set to 1|
+
+The following table shows an entry
+
+|ID|Lat|Lng|Power|Name|Type|Double|
+|---|---|---|---|---|---|---|
+|71982|	47.409|	8.601|	50	|Nissan Neugut Garage Flury in Wallisellen|	existing_station	|0|
 
 
 # Configuring the configuration
