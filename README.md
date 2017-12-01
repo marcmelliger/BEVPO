@@ -115,11 +115,28 @@ and needs to have the following columns (the name of the columns can be adjusted
 |legEndAddressManual|Other type of address if Google Map Routing fails|
 |legPurpose|A purpose number for the trip, e.g. 2 for Work. Corresponds to the definition in RunAnalysis[Country]|
 |leisurePurpose|A separate purpose number for leisture trips. Corresponds to the definition in RunAnalysis[Country]|
-|wayPurpose|The purpose numbers of these ways  (Some travel surveys summarise individual legs to ways)|
+|wayPurpose|The purpose numbers of these ways  (Some travel surveys summarise individual legs to ways). It is used to set the last purpose of a trip in the simulation.|
+|driverType|Type of the driver. Used to differentiate between drivers and co-passengers. Defined in RunAnalysis[Country].java in legCoPassenger|
+|carType|Type of the car. E.g . HomeCar. Defined in RunAnalysis[Country].java in carTypeStrings.|
+|carID|An ID that is unique to individual cars in a household|
+|homeParking|Variable used to define if parking spaces are available. <=0 is no parking space, >0 is with parking space|
 
+The following is and example entry:
+|householdID|personID|legID|distance|legStartTime|legEndTime|legStartAddress|legEndAddress|legStartAddressAlt|legEndAddressAlt|legStartAddressManual|legEndAddressManual|legPurpose|leisurePurpose|wayPurpose|driverType|carType|carID|homeParking|
 
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 
---> example with multiple person
+|6|	1|	1|	33	|700	|1000	|1800	|1050	|Municp1	|Municp2		||	|8	|1	|8	1|	8|	1|	1|	3|
+||6|	2|	1|	12	|700	|1000	|1800	|1050	|Municp1	|Municp2	||		|8	|1	|8	1|	8|	1|	1|	3|
+||6|	1|	2|	33.1|1400	|1600	|1050	|1800	|Municp2	|Municp1	||		|11	|-99|	8|	2|	8|	1|	1|	3|
+|6|	2|	2|	12.2|1400	|1600	|1050	|1800	|Municp2	|Municp1		||	|11	|-99|	8|	2|	8|	1|	1|	3|
+|7|	1|	1|	0.5	|500	|510	|1200	|1201	|Municp3	|Municp3		||	|3	|-99|	3|	1|	8|	1|	1|	2|
+|7|	1|	2|	10	|900	|940	|1201	|1000	|Municp4	|Municp5		||	|4	|-99|	4|	1|	8|	1|	1|	2|
+|7|	1|	3|	7	|940	|950	|1000	|1900	|Municp5	|Municp6		||	|3	|-99|	3|	1|	8|	1|	1|	2|
+|7|	1|	4|	20	|1010	|1050	|1900	|1201	|Municp6	|Municp4		||	|3	|-99|	3|	1|	8|	1|	1|	2|
+|7|	1|	5|	10	|1100	|1300	|1201	|1200	|Municp4	|Municp3		||	|11	|-99|	3|	2|	8|	1|	1|	2|
+|7|	2|	4|	20	|1000	|1300	|8000	|8704	|Zurich		|Herrliberg		||	|3	|-99|	3|	1|	8|	1|	2|	2|
+|7|	2|	5|	10	|1300	|1500	|8704	|8000	|Herrliberg |Zurich			|||11		|-99|	3|	2|	8|	1|	2|	2|
 
 In most cases, you want query your travel survey, to only containt cars. To build the required data file and consider this condition, a SQL statement as the following one is suitable. It is valid for the Swiss national travel survey Mikrozensus Mobilität 2011:
 
