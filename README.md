@@ -75,6 +75,78 @@ Assuming your project data is located in */Users/mmweb/bevpo/*, you need to manu
 |Output                       |basePathOutput|/Output/|Output folder for all the model calculations|
 |Temp Folder                  |basePathSer|/Serialised/|Temp folder for all Google Maps Queries|
 
+Next you have to create specifc folders for the countries you want to simulate. For instance, if you want to make simulations based on Swiss travel surveys, open the File RunAnalysisSwiss.java. If you want to create an other country, you should rename this file: right click on RunAnalysisSwiss and Refactor > Rename..., rename the file to RunAnalysis[Country] and ignore the warnings.
+
+Adjust the following variables in RunAnalysis[Country].java
+
+```
+countryNameLong = "Switzerland"; // Fullname
+countryNameShort = "CH"; // Countrycode big letter
+countryToplevel = "ch"; // toplevel domain
+```
+
+
+### Travel surveys.
+TODO: description of travel survey
+
+The path to the travel survey csv needs to be set in RunAnalysis[Country].java
+```
+LEG_DATA_FILENAME = "travel_survey.csv";
+```
+
+The csv file contains individual legs that have been covered by cars. 
+
+
+and needs to have the following columns (the name of the columns can be adjusted in RunAnalysis[Country].java
+
+|Column|Description|
+|---|---|
+|householdID|An ID that is unique to individual households. Ther can be many legs with different cars with the same householdID|
+|personID|In multi person households, the personID identifies the persons|
+|legID|The legID identifies the individual legs. The ID starts at 1 for every car and person in a household| 
+|distance|The distance of the leg in km|
+|legStartTime|The start time of the leg in minutes after midnight|
+|legEndTime|The end time of the leg in minutes after midnight|
+|legStartAddress|The postalcode of the leg's start location|
+|legEndAddress|The postalcode of the leg's destination|
+|legStartAddressAlt|The municaplity of the leg's start location|
+|legEndAddressAlt|The municaplity of the leg's destination|
+|legStartAddressManual|Other type of address if Google Map Routing fails|
+|legEndAddressManual|Other type of address if Google Map Routing fails|
+|legPurpose|A purpose number for the trip, e.g. 2 for Work. Corresponds to the definition in RunAnalysis[Country]|
+|leisurePurpose|A separate purpose number for leisture trips. Corresponds to the definition in RunAnalysis[Country]|
+|wayPurpose|The purpose numbers of these ways  (Some travel surveys summarise individual legs to ways)|
+
+
+
+--> example with multiple person
+
+In most cases, you want query your travel survey, to only containt cars. To build the required data file and consider this condition, a SQL statement as the following one is suitable. It is valid for the Swiss national travel survey Mikrozensus Mobilität 2011:
+
+```
+SELECT
+     etappen.HHNR as householdID, etappen.ZIELPNR as personID, etappen.ETNR as legID, #IDs
+     etappen.rdist as distance, # Distance
+     etappen.f51100 as legStartTime, etappen.f51400 as legEndTime, # Time
+
+     etappen.S_PLZ as legStartAddress, etappen.Z_PLZ as legEndAddress,
+     etappen.S_Ort as legStartAddressAlt, 
+     etappen.Z_Ort as legEndAddressAlt, 
+     '' as legStartAddressManual,
+     '' as legEndAddressManual,# Addresses
+
+     etappen.f52900 as legPurpose, etappen.f51700 as leisurePurpose, # Purpose
+     wege.wzweck1 as wayPurpose, wege.wzweck2 as wayHomewayPurpose, # WayPurposes
+     etappen.f51300 as driverType, etappen.f51310a as carType, etappen.f51310b as carID, # Carinfo
+     haushalte.f31100 as homeParking # Parking at home
+FROM etappen
+     JOIN haushalte ON etappen.HHNR = haushalte.HHNR
+     JOIN wege ON etappen.HHNR = wege.HHNR AND etappen.ZIELPNR = wege.ZIELPNR AND etappen.WEGNR = wege.WEGNR
+
+WHERE (etappen.f51300 = 7 OR etappen.f51300 = 8) AND NOT (etappen.S_KANTON = -97 OR etappen.Z_KANTON = -97)
+ORDER BY householdID,legStartTime,personID,carType ASC
+```
+
 
 
 
