@@ -25,7 +25,7 @@ The files are now on your local drive but not yet imported as project in Eclipse
 
 Now the project named dataAnalysis should be visible in the Package Explorer Perspective. If no errors appear, you are ready to set up the Configuration and prepare the data. If errors appear, read the next section:
 
-##Troubleshooting
+## Troubleshooting
 
 It can happen that there are errors in the project (visible from the red X next to the dataAnalysis project. This issue can occur due to corrupted jar files in the maven dependencies.  On Mac OS do the following
 
@@ -37,6 +37,14 @@ It can happen that there are errors in the project (visible from the red X next 
 6. In Eclipse: Right click the project dataAnalysis in the package expolorer and select Maven > Update Project. Check "Force Update of Snapshots/Releases" and click OK. 
 
 The issue should now be fixed and the errors disappear. 
+
+# Configuration
+
+For a successful BEVPO model run, you need to 
+
+- create the input folders with the correctly formated data files
+- create empty output folders
+- create property files that hold 
 
 
 
