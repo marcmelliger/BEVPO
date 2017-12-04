@@ -188,9 +188,59 @@ The following table shows an entry
 |---|---|---|---|---|---|---|
 |71982|	47.409|	8.601|	50	|Nissan Neugut Garage Flury in Wallisellen|	existing_station	|0|
 
+### Car models
+This car models data file contains the specifics of all car models available to the simulation. The share of car models in the individual configurations is found in another data file, the "car model share" file. Both files use the same ID fields.
+
+The path to the Car models data file needs to be set in RunAnalysis[Country].java. Do not add the csv ending.
+```
+CAR_MODEL_FILENAME = "car_models";
+```
+
+
+Each record of the data file is an individual car model. The csv file needs to have the following structure (the names of the fields can be adjusted in RunAnalysis[Country].java).
+
+|Field|Description|Format|
+|---|---|---|
+|carModelID|A unique identifier|Unique integer|
+|carModel|Name of the car model|String|
+|modelYear|Year of the car model|Integer|
+|range|Range in km|Float|
+|batteryCapacity|Capacity of battery in kWh|Float|
+|energyConsumption|Average energy Consumption of the car in kWh/km|Float|
+|availablePlugs|Relates to the charger data file and lists available plugs in car model|list separated with ;|
+|price|informative price|String|
+
+### Car models share
+For the simulations, the share of car model needs to be known.
+
+The path to the Car models share data file needs to be set in the configurations. Do not add the csv ending.
+```
+CAR_MODEL_SHARE_FILENAME = share_baseline_CH
+```
+
+|Field|Description|Format|
+|---|---|---|
+|carModelID|A unique identifier. Needs to be the same as in Car models|Unique integer|
+|probability|THe probability that this car models gets assigned in the random assignment of car models|Float 0 - 1|
+
+
+### Charging station trypes
+For the assignment of charging stations at activities, the typed of charging stations need to be defined in this file.
+
+|Field|Description|Format|
+|---|---|---|
+|chargerID|A unique identifier|Unique integer|
+|chargerType|A name for the charger|string|
+|chargerPower|The power of the Charger in kW|float|
+
+
+### Charging station trypes
+THe distribution of the chargers is set in this file. It is a matrix of all activites that are available in the travel survey and defined in RunAnalysis[Country].java
+
+Compare file input 
+
 
 # Configuring the configuration
-
 
 The configuration files, most simulation variables can be set. The files are located in: ```config/[countryNameShort]/``` and have the ending properties; e.g. config/CH/CH_baseline.properties
 
@@ -207,6 +257,14 @@ TODO: describe car_model share file, charger matrix file
 |considerHouseholdParkingSpaces| |true or false|
 |serviceAreasEnabled| |true or false|
 |enableChargingDecisionLevel| |0-3|
+
+
+# Using Google Api
+
+You need to get a Api key and enter it in the respective file in the input folder.
+
+The folder serialised stores all temporaray data from the google queries.
+
 
 # Running a simulation
 To run a simulation, you need to have a configuration file set up. If you use Eclipse, proceed as follows to run a simulation:
