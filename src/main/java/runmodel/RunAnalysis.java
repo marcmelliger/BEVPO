@@ -39,15 +39,15 @@ public abstract class RunAnalysis{
 	// General Config
 	
 	
-	public static String basePathQueries 	= "/Users/marc/Documents/ETH/Masterarbeit/Data/Queries/";
+	public static String basePathQueries 	= "/Users/marcmel/Library/Mobile Documents/com~apple~CloudDocs/Documents/ETH/Masterarbeit/Data/Queries/";
 	
-	public static String baseInputPath		= "/Users/marc/Documents/ETH/Masterarbeit/Data/Input/";
-	public static String basePathChargermap	= "/Users/marc/Documents/ETH/Masterarbeit/Data/Input/chargermap/";
-	public static String basePathCar 		= "/Users/marc/Documents/ETH/Masterarbeit/Data/Input/cars/csv/";
-	public static String basePathChargers 	= "/Users/marc/Documents/ETH/Masterarbeit/Data/Input/chargers/csv/";
+	public static String baseInputPath		= "/Users/marcmel/Library/Mobile Documents/com~apple~CloudDocs/Documents/ETH/Masterarbeit/Data/Input/";
+	public static String basePathChargermap	= "/Users/marcmel/Library/Mobile Documents/com~apple~CloudDocs/Documents/ETH/Masterarbeit/Data/Input/chargermap/";
+	public static String basePathCar 		= "/Users/marcmel/Library/Mobile Documents/com~apple~CloudDocs/Documents/ETH/Masterarbeit/Data/Input/cars/csv/";
+	public static String basePathChargers 	= "/Users/marcmel/Library/Mobile Documents/com~apple~CloudDocs/Documents/ETH/Masterarbeit/Data/Input/chargers/csv/";
 
-	public static String basePathOutput		= "/Users/marc/Programmieren/Masterthesis/Output/";
-	public static String basePathSer 		= "/Users/marc/Programmieren/Masterthesis/Serialised/";
+	public static String basePathOutput		= "/Users/marcmel/Documents/data/masterthesis/Output/";
+	public static String basePathSer 		= "/Users/marcmel/Documents/data/masterthesis/Serialised/";
 
 
 	public static String CODE_MISSING_DATA = "-99";
