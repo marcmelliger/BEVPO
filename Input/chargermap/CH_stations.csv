@@ -1,0 +1,110 @@
+ID,Lat,Lng,Power,Name,Type,Double
+71982,47.409,8.601,50,Nissan Neugut Garage Flury in Wallisellen,existing_station,0
+1,46.445,6.297,50,Raststätte La Côte,service_station,1
+4,46.991,7.476,50,Raststätte Grauholz,service_station,1
+7,47.330,8.030,50,Raststätte Kölliken,service_station,1
+73092,47.525,7.682,50,Aqua Basilea,existing_station,1
+82390,46.311,7.750,50,Schnellladesäule winsun in Steg,existing_station,1
+2,46.675,6.569,50,Raststätte de Bavois,service_station,0
+3,46.832,6.857,50,Restouroute Rose de la Broye,service_station,0
+5,47.229,7.622,50,Raststätte Deitingen,service_station,0
+6,47.310,7.846,50,Raststätte Gunzgen,service_station,0
+8,47.439,8.347,50,Raststätte Würenlos,service_station,0
+9,47.449,8.700,50,Raststätte Kempthal,service_station,0
+10,47.526,8.734,50,Raststätte Forrenberg,service_station,0
+11,47.460,9.094,50,Raststätte Thurau,service_station,0
+12,47.461,9.602,50,Raststätte St. Margrethen ,service_station,0
+13,47.527,7.701,50,Raststätte Pratteln,service_station,0
+14,47.336,7.829,50,Raststätte Eggberg,service_station,0
+15,47.333,7.821,50,Raststätte Teufengraben,service_station,0
+16,47.111,8.233,50,Raststätte Neuenkirch,service_station,0
+17,46.847,8.633,50,Raststätte Gotthard,service_station,0
+18,46.515,8.666,50,Raststätte San Gottardo,service_station,0
+19,46.209,9.027,50,Raststätte Bellinzona,service_station,0
+20,45.850,8.983,50,Raststätte Coldrerio,service_station,0
+21,47.220,8.662,50,Raststätte Herrlisberg,service_station,0
+22,47.196,8.752,50,Raststätte Fuchsberg,service_station,0
+23,47.138,9.050,50,Raststätte Glarnerland,service_station,0
+24,47.113,9.266,50,Raststätte Walensee,service_station,0
+25,47.740,8.716,50,Raststätte Treffpunkt Thayngen,service_station,0
+26,47.581,8.683,50,Raststätte Weinland,service_station,0
+27,47.272,8.438,50,Raststätte Konaueramt,service_station,0
+28,47.168,7.352,50,Raststätte Pieterlen,service_station,0
+29,46.878,7.542,50,Raststätte Münsingen,service_station,0
+30,46.505,6.710,50,Raststätte de Lavaux,service_station,0
+31,46.337,6.931,50,Raststätte Relais Chablais,service_station,0
+32,46.127,7.061,50,Raststätte Relais Grand St-Bernard ,service_station,0
+33,46.682,7.087,50,Raststätte de la Gruyère,service_station,0
+34,47.146,9.501,50,Raststätte Rheintal,service_station,0
+35,47.012,9.512,50,Raststätte Heidiland,service_station,0
+36,46.713,9.445,50,Raststätte Viamala,service_station,0
+37,46.232,9.104,50,Raststätte Campagnola,service_station,0
+38,47.318,2.087,50,Raststätte Heuberg,service_station,0
+31544,46.823,7.150,50,Groupe E,existing_station,0
+42441,47.502,8.763,50,DMG MORI Global Headquarter,existing_station,0
+54282,46.017,8.962,50,Amag Evite,existing_station,0
+62765,46.755,7.586,50,Thunstrasse,existing_station,0
+62773,47.408,8.409,50,Josef Staub-Strasse,existing_station,0
+62774,47.445,9.154,50,Buchentalstrasse,existing_station,0
+62777,47.490,8.246,50,Im Halt 2,existing_station,0
+64818,46.040,8.931,50,Emil Frey SA BMW,existing_station,0
+67849,46.560,6.561,50,Chemin de Chatanerie,existing_station,0
+68503,46.178,8.819,50,Shoeroom RIVAPIANA BMW dealer,existing_station,0
+71948,47.037,9.434,50,Chickeria a Wangs,existing_station,0
+71949,47.426,9.608,50,Rathausplatz in Berneck,existing_station,0
+71950,47.034,8.582,50,Bergstrasse in Lauerz,existing_station,0
+71951,46.971,8.459,50,EVite in Beckenried,existing_station,0
+71952,47.058,8.285,50,BMW Händler in Luzern,existing_station,0
+71953,47.035,8.242,50,Kriens EVTEC in Kriens,existing_station,0
+71962,46.846,9.510,50,Alpina Garage BMW in Chur,existing_station,0
+71975,47.395,8.638,50,Lidl in Dübendorf,existing_station,0
+71977,47.402,8.610,50,AMAG Autowelt in Dübendorf,existing_station,0
+71999,47.412,8.541,50,ABB Oerlikon (Historisches Gebäude) in Zürich,existing_station,0
+72004,47.326,8.530,50,Autocenter Zürich Süd in Adliswil,existing_station,0
+73042,46.470,8.817,50,Camping Gottardo in Chiggiogna,existing_station,0
+73049,46.538,6.553,50,MOVE Schnelllader in Ecublens,existing_station,0
+73050,46.445,6.297,50,Evite a Bursins,existing_station,0
+73051,46.196,6.113,50,AMAG Automobiles in Petit-Lancy,existing_station,0
+73053,46.627,7.068,50,Gruyère Énergie SA in Bulle,existing_station,0
+73054,46.832,6.858,50,Rose de la Broye in Lully,existing_station,0
+73058,46.931,7.380,50,BMW Marti in Niederwangen,existing_station,0
+73061,46.966,7.467,50,AMAG in Bern,existing_station,0
+73062,46.991,7.477,50,Raststätte Grauholz in Ittigen,existing_station,0
+73063,47.017,7.492,50,Schnellladestationen Shoppyland in Schönbühl,existing_station,0
+73064,47.203,7.573,50,Ziegler Elektro AG in Zuchwil,existing_station,0
+73065,47.083,7.297,50,Autobahn-Garage Zwahlen & Wieser in Lyss,existing_station,0
+73091,47.480,7.592,50,BMW Niederlassung in Aesch,existing_station,0
+73093,47.395,8.167,50,ABB,existing_station,0
+73094,47.448,8.168,50,AMAG Automobiles in Schinznach-Bad,existing_station,0
+73095,47.479,8.306,50,ABB in Baden,existing_station,0
+73099,47.483,8.463,50,BMW Niederlassung in Dielsdorf,existing_station,0
+73101,47.483,8.705,50,Squash Center Auwiesen in Winterthur,existing_station,0
+73102,47.487,8.704,50,LIDL Töss in Winterthur,existing_station,0
+73107,47.414,9.249,50,Parkplatz Marktplatz in Gossau,existing_station,0
+73108,47.413,9.341,50,EMPA in St. Gallen,existing_station,0
+73109,47.468,9.589,50,MIGROS in Rheineck,existing_station,0
+73110,47.453,9.635,50,Parkplatz Raiffeisenbank in St. Margrethen,existing_station,0
+73111,47.433,9.634,50,Schnelllader Gemeinde Au SG in Au,existing_station,0
+82389,47.458,8.278,50,ABB Research a Baden,existing_station,0
+82391,46.399,6.205,50,Avia Auto Service in Signy,existing_station,0
+82392,47.324,8.022,50,Raststätte Kölliken Süd in Kölliken,existing_station,0
+82395,47.366,8.771,50,Lidl in Pfäffikon,existing_station,0
+82396,47.400,8.432,50,Lidl in Schlieren,existing_station,0
+82397,47.229,8.847,50,Lidl in Jona,existing_station,0
+82398,47.566,8.907,50,Lidl in Frauenfeld,existing_station,0
+83995,47.280,8.336,50,Lidl,existing_station,0
+83996,45.947,7.210,50,Grosser St. Bernhard Tunnel Nordportal,existing_station,0
+73060,46.949,7.438,50,PostParc in Bern,existing_station,0
+47306,46.971,8.459,120,Beckenried Supercharger,existing_station,1
+75014,46.127,7.061,120,Martigny Supercharger,existing_station,1
+47307,47.327,7.805,120,Egerkingen Supercharger,existing_station,0
+75066,46.892,7.543,120,Rubigen Supercharger,existing_station,0
+75237,47.004,9.526,120,Maienfeld Supercharger,existing_station,0
+75267,47.413,8.617,120,Dietlikon Supercharger,existing_station,0
+75315,47.525,7.682,120,Pratteln Supercharger,existing_station,0
+75388,46.139,8.907,120,Monte Ceneri Supercharger,existing_station,0
+79229,46.310,7.750,120,Steg-Hohtenn Supercharger,existing_station,0
+84036,46.497,9.843,120,St. Moritz Supercharger,existing_station,0
+20646,46.832,6.859,120,Lully Supercharger,existing_station,1
+71959,46.521,8.635,120,Autobahnraststätte Stalvedro in Airolo,existing_station,0
+82393,47.402,8.065,120,Derendinger AG in Aarau,existing_station,0
