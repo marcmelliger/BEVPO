@@ -190,6 +190,34 @@ The following table shows an entry
 
 
 # Configuring the configuration
-The properties files represent store the configurations, i.e. scenarios and policy packages
+
+
+The configuration files, most simulation variables can be set. The files are located in: ```config/[countryNameShort]/``` and have the ending properties; e.g. config/CH/CH_baseline.properties
+
+The following variables can be set:
+
+TODO: describe car_model share file, charger matrix file
+
+|Variable|Description|Format|
+|---|---|---|
+|Filenames|||
+|CAR_MODEL_SHARE_FILENAME|Name of the car model share file|String|
+|CHARGER_MATRIX_FILENAME|Name of the charger matrix file|String|
+|Scenario Variable||
+|considerHouseholdParkingSpaces| |true or false|
+|serviceAreasEnabled| |true or false|
+|enableChargingDecisionLevel| |0-3|
+
+# Running a simulation
+To run a simulation, you need to have a configuration file set up. If you use Eclipse, proceed as follows to run a simulation:
+
+1. Run > Run Configurations...
+2. Select Java Application and press the "New" Button
+3. In the Name field enter a Name for your configuration 
+4. In the project field select the project dataAnalysis
+5. In the field Main class select "Search..." and search for "RunAnalysis[Country].java"
+6. Open the tab "Arguments" and enter the name of your configuration, e.g. "CH_baseline" (i.e. without the ".properties" fileending).
+
+
 
 
