@@ -62,18 +62,18 @@ For a successful BEVPO model run, you need to
 ## Creating and Setting the main paths
 All relevant paths of the model are stored in src.main.java.runmodel.RunAnalysis.java.
 
-Assuming your project data is located in */Users/mmweb/bevpo/*, you need to manually create the following folders and adjust the paths in RunAnalysis.java
+Assuming your project data is located in */Users/user/bevpo/data/*, you need to manually create the following folders and adjust the paths in RunAnalysis.java
 
 
 |Name |Variable Name|Path   |Description|
 |---|---|---|---|
-|Travel Surveys               |basePathQueries|/Data/Queries/| contains the travel survey in the csv format. Data structure below|
-|Input                        |baseInputPath|/Data/Input/| Input folder for all data but the travel survey|
-|Charging Station Coordinates |basePathChargermap|  /Data/Input/chargermap   |Coordinates and name of charging stations  |
-|Car models                   |basePathCar| /Data/Input/cars/csv/|Specifications of the car models|
-|Charing Station Types        |basePathChargers|/Input/chargers/csv/|Specifications of available chargin station types|
-|Output                       |basePathOutput|/Output/|Output folder for all the model calculations|
-|Temp Folder                  |basePathSer|/Serialised/|Temp folder for all Google Maps Queries|
+|Travel Surveys               |basePathQueries|/queries/| contains the travel survey in the csv format. Data structure below|
+|Input                        |baseInputPath|/input/| Input folder for all data but the travel survey|
+|Charging Station Coordinates |basePathChargermap|  /input/chargermap/   |Coordinates and name of charging stations  |
+|Car models                   |basePathCar| /input/cars/|Specifications of the car models|
+|Charing Station Types        |basePathChargers|/input/chargers/|Specifications of available chargin station types|
+|Output                       |basePathOutput|/output/|Output folder for all the model calculations|
+|Temp Folder                  |basePathSer|/serialised/|Temp folder for all Google Maps Queries|
 
 Next you have to create specifc folders for the countries you want to simulate. For instance, if you want to make simulations based on Swiss travel surveys, open the File RunAnalysisSwiss.java. If you want to create an other country, you should rename this file: right click on RunAnalysisSwiss and Refactor > Rename..., rename the file to RunAnalysis[Country] and ignore the warnings.
 
@@ -91,7 +91,7 @@ The travel survey data file contains all the travel diaries. It is based on sing
 
 The path to the travel survey data file needs to be set in RunAnalysis[Country].java
 ```
-LEG_DATA_FILENAME = "travel_survey.csv";
+LEG_DATA_FILENAME = "CH/travel_survey.csv";
 ```
 
 Each record of the data file is an individual legs that has been covered by one car. The file need to have the following structure (the names of the fields can be adjusted in RunAnalysis[Country].java)
@@ -193,7 +193,7 @@ This car models data file contains the specifics of all car models available to 
 
 The path to the Car models data file needs to be set in RunAnalysis[Country].java. Do not add the csv ending.
 ```
-CAR_MODEL_FILENAME = "car_models";
+CAR_MODEL_FILENAME = "carmodels";
 ```
 
 
