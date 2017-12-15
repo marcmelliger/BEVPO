@@ -3,7 +3,7 @@
 
 The purpose of this JAVA model is to assess the potential of BEV (battery electric vehicle) trips. To do that, BEVPO simulated trips by BEVs based on national travel survey such as the Mikrozensus Mobilität in Switzerland.   
 
-The travel surveys I used for my study are protected from copyright and can not be published. However, this document explains how to prepare the data from such a travel survey.
+The travel surveys I used for my study are protected by copyright and can not be published. However, this document explains how to prepare the data from such a travel survey.
 
 
 
@@ -12,13 +12,13 @@ The travel surveys I used for my study are protected from copyright and can not 
 # Installation
 
 ## Create your own fork of BEVPO
-If you don't have a GitHub Account yet, creat one.
+If you don't have a GitHub Account yet, create one.
 
-First create a fork of my BEVPO repository. For this, go to https://github.com/MMWeb87/BEVPO/ and click "Fork". Now a new Fork of the BEVPO model should be available in your account. Remember the path of your fork for the next step.
+First, create a fork of my BEVPO repository. For this, go to https://github.com/MMWeb87/BEVPO/ and click "Fork". Now a new Fork of the BEVPO model should be available in your account. Remember the path of your fork for the next step.
 
 ## Install BEVPO locally in Eclipse
 
-I recommend to use an IDE such as Eclipse to run the BEVPO model. To set up BEVPO in eclipse, follow these steps in Eclipse:
+I recommend using an IDE such as Eclipse to run the BEVPO model. To set up BEVPO in eclipse, follow these steps in Eclipse:
 
 1. Select Window > Show View > Other.... In the dialogfield click Git > Git Repositories
 2. In the now visible perspective click the button "Clone a Git Repository"
