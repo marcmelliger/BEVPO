@@ -33,18 +33,18 @@ The files are now on your local drive but not yet imported as project in Eclipse
 8. Click on "Browse" and select the project in the git folder created in step 5
 9. Make sure that pom.xml is selected and click OK
 
-Now the project named dataAnalysis should be visible in the Package Explorer Perspective. If no errors appear, you are ready to set up the Configuration and prepare the data. If errors appear, read the next section:
+Now the project named BEVPO should be visible in the Package Explorer Perspective. If no errors appear, you are ready to set up the Configuration and prepare the data. If errors appear, read the next section:
 
 ## Troubleshooting
 
-It can happen that there are errors in the project (visible from the red X next to the dataAnalysis project. This issue can occur due to corrupted jar files in the maven dependencies.  On Mac OS do the following
+It can happen that there are errors in the project (visible from the red X next to the BEVPO project. This issue can occur due to corrupted jar files in the maven dependencies.  On Mac OS do the following
 
 1. Locate the error in the source file (Follow the X)
 2. If the error is related to the import command like "com.google.common.base.Charsets" (if not all imports are visible click the plus besides the first import on top), you have to manually remove the affected files.
 3. In the case of "com.google.common.base.Charsets", the files belongs to guava-21.jar. This can be found out by opening the Folder "Maven Dependencies" in the Package Exporer Perspective. There you see all dependencies. In eclipse, the folder names are shown besided the .jar files. So if the problem was related to "import com.google.common.base.Charsets" there should be a guava-21.0.jar with the path "/Users/[yourname]/.m2/repository/com/google/guava/guava/21.0".
 4. Open the terminal and enter "cd /Users/[yourname]/.m2/repository/com/google/guava/guava/". Check that you are in the correct folder with the command "ls": you shoud see a folder called 21.0.
 5. Remove this folder with the command: "rm -R guava"
-6. In Eclipse: Right click the project dataAnalysis in the package expolorer and select Maven > Update Project. Check "Force Update of Snapshots/Releases" and click OK. 
+6. In Eclipse: Right click the project BEVPO in the package expolorer and select Maven > Update Project. Check "Force Update of Snapshots/Releases" and click OK. 
 
 The issue should now be fixed and the errors disappear. 
 
@@ -272,7 +272,7 @@ To run a simulation, you need to have a configuration file set up. If you use Ec
 1. Run > Run Configurations...
 2. Select Java Application and press the "New" Button
 3. In the Name field enter a Name for your configuration 
-4. In the project field select the project dataAnalysis
+4. In the project field select the project BEVPO
 5. In the field Main class select "Search..." and search for "RunAnalysis[Country].java"
 6. Open the tab "Arguments" and enter the name of your configuration, e.g. "CH_baseline" (i.e. without the ".properties" fileending).
 
