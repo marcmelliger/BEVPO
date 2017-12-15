@@ -18,10 +18,9 @@ public class RunAnalysisSwiss extends RunAnalysis{
 		countriesAllowedInGoogleResult.add(countryNameLong);
 
 		// Filenames are defaults and can be adjusted in the scenario config file
-		LEG_DATA_FILENAME = "CH/a003_q09.csv";
+		LEG_DATA_FILENAME = "CH/travel_survey.csv";
 		CHARGING_STATIONS_FILENAME = "CH_stations.csv";
-
-		CAR_MODEL_FILENAME = "car_models_v2";
+		CAR_MODEL_FILENAME = "carmodels";
 		CHARGER_TYPE_FILENAME = "chargers";
 		
 		householdParkingSpacesFactor = 1;

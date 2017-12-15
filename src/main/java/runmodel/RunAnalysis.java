@@ -33,30 +33,25 @@ import utils.ProbabilityItem;
 
 
 public abstract class RunAnalysis{ 
-	
-	
-	
-	// General Config
-	
-	
-	public static String basePathQueries 	= "/Users/marcmel/Library/Mobile Documents/com~apple~CloudDocs/Documents/ETH/Masterarbeit/Data/Queries/";
-	
-	public static String baseInputPath		= "/Users/marcmel/Library/Mobile Documents/com~apple~CloudDocs/Documents/ETH/Masterarbeit/Data/Input/";
-	public static String basePathChargermap	= "/Users/marcmel/Library/Mobile Documents/com~apple~CloudDocs/Documents/ETH/Masterarbeit/Data/Input/chargermap/";
-	public static String basePathCar 		= "/Users/marcmel/Library/Mobile Documents/com~apple~CloudDocs/Documents/ETH/Masterarbeit/Data/Input/cars/csv/";
-	public static String basePathChargers 	= "/Users/marcmel/Library/Mobile Documents/com~apple~CloudDocs/Documents/ETH/Masterarbeit/Data/Input/chargers/csv/";
+		
+	// Adjust these paths to the specific directories
+	public static String basePathQueries 	= "/Users/user/data/queries/";
+	public static String baseInputPath		= "/Users/user/data/input/";
+	public static String basePathChargermap	= "/Users/user/data/input/chargermap/";
+	public static String basePathCar 		= "/Users/user/data/input/cars/";
+	public static String basePathChargers 	= "/Users/user/data/input/chargers/";
+	public static String basePathOutput		= "/Users/user/data/output/";
+	public static String basePathSer 		= "/Users/user/data/serialised/";
 
-	public static String basePathOutput		= "/Users/marcmel/Documents/data/masterthesis/Output/";
-	public static String basePathSer 		= "/Users/marcmel/Documents/data/masterthesis/Serialised/";
-
-
+	// Adjust these number to the missing data codes in your data
 	public static String CODE_MISSING_DATA = "-99";
 	public static String CODE_MISSING_DATA2 = "-97";
+
+	
+	// No edit from here necessary
 	
 	public static int CODE_RETURN_HOME;
 	public static Integer CODE_TRANSFER;
-	
-	// No edit from here necessary
 	
 	public static String LEG_DATA_FILENAME;
 	public static String CHARGING_STATIONS_FILENAME;

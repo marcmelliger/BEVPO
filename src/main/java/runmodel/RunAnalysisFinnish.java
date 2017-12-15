@@ -18,20 +18,13 @@ public class RunAnalysisFinnish extends RunAnalysis{
 		countriesAllowedInGoogleResult.add("Åland Islands");
 		
 		// Filenames are defaults and can be adjusted in the scenario config file
-		LEG_DATA_FILENAME = "FIN/FIN_data_edited_15_3_cleaned.csv";
-		// TODO: load data with stations
+		LEG_DATA_FILENAME = "FIN/travel_survey.csv";		
+		CHARGING_STATIONS_FILENAME = "FIN_stations.csv";		
+		CAR_MODEL_FILENAME = "carmodels"; // don't write csv ending
+		CHARGER_TYPE_FILENAME = "chargers"; // don't write csv ending
 		
-		CHARGING_STATIONS_FILENAME = "FIN_stations.csv";
-		//EXISTING_CHARGING_STATIONS_FILENAME = "FIN_level3_compact.json";
-		
-		CAR_MODEL_FILENAME = "car_models_v2";
-		CHARGER_TYPE_FILENAME = "chargers";
-		
-		householdParkingSpacesFactor = 0.3;
-
-		
-
-		
+		householdParkingSpacesFactor = 0.3;	
+	
 		init();
 		
 		HOUSEHOLD_ID 	= "HHNR";
