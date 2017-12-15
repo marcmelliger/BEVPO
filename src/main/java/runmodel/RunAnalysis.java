@@ -35,13 +35,13 @@ import utils.ProbabilityItem;
 public abstract class RunAnalysis{ 
 		
 	// Adjust these paths to the specific directories
-	public static String basePathQueries 	= "/Users/user/data/queries/";
-	public static String baseInputPath		= "/Users/user/data/input/";
-	public static String basePathChargermap	= "/Users/user/data/input/chargermap/";
-	public static String basePathCar 		= "/Users/user/data/input/cars/";
-	public static String basePathChargers 	= "/Users/user/data/input/chargers/";
-	public static String basePathOutput		= "/Users/user/data/output/";
-	public static String basePathSer 		= "/Users/user/data/serialised/";
+	public static String basePathQueries 	= "/Users/user/bevpo/data/queries/";
+	public static String baseInputPath		= "/Users/user/bevpo/data/input/";
+	public static String basePathChargermap	= "/Users/user/bevpo/data/input/chargermap/";
+	public static String basePathCar 		= "/Users/user/bevpo/data/input/cars/";
+	public static String basePathChargers 	= "/Users/user/bevpo/data/input/chargers/";
+	public static String basePathOutput		= "/Users/user/bevpo/data/output/";
+	public static String basePathSer 		= "/Users/user/bevpo/data/serialised/";
 
 	// Adjust these number to the missing data codes in your data
 	public static String CODE_MISSING_DATA = "-99";
